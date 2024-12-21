@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Course_prj.Greek"
+             Title="Greek sculpture"
+			 BackgroundColor="Beige">
+    
+    <Grid Margin="15" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Grid.RowSpan="2" BackgroundColor="Brown">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20,20,20,20" />
+            </Border.StrokeShape>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".3*"></RowDefinition>
+                    <RowDefinition Height=".7*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="2"
+                Source="item1.png"></Image>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="1"
+                     Margin="0,35,15,0"
+                     BackgroundColor="Beige"
+                     HeightRequest="35"
+                     WidthRequest="35"
+                     HorizontalOptions="End"
+                     VerticalOptions="Start">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10,10,10,10"></RoundRectangle>
+                        </Border.StrokeShape>
+                        <Image x:Name="favourite" HeightRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="star.svg"></Image>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2"
+         Grid.RowSpan="1"
+         Margin="0,-150,0,0"
+         HeightRequest="180">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30,30,30,30" />
+            </Border.StrokeShape>
+            <Grid Padding="20"
+           BackgroundColor="DarkGrey"
+           RowDefinitions="*,*,*"
+           ColumnDefinitions="*,*">
+                <Label Grid.Column="0" Grid.Row="0" FontAttributes="Bold"
+                FontSize="20"
+                Text="Greek sculpture"
+                TextColor="DarkRed"></Label>
+                <Label Grid.Column="0" Margin="0,30,0,0" FontAttributes="Bold"
+                FontSize="15"
+                Text="Ancient Greece"
+                TextColor="White"/>
+                <Label  Grid.Column="0" Grid.RowSpan="3" Margin="0,70,20,0" FontAttributes="Italic"
+                FontSize="18"
+                Text="400 BC"
+                TextColor="DarkRed"
+                HorizontalOptions="Start"/>
+                <Button Margin="0,-20,0,0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalOptions="End"
+                 BackgroundColor="Azure"
+                 Text="Add to favorites"
+                 FontSize="12"
+                 FontAttributes="Bold"
+                 TextColor="Black"
+                 HeightRequest="40">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Button.GestureRecognizers>
+
+                </Button>
+            </Grid>
+
+        </Border>
+        <Grid Grid.Row="3" Margin="0,-80,0,0" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Margin="0,10,0,0">
+                <Label FontSize="16"
+                Text="Description"
+                TextColor="Black"></Label>
+                <Label FontSize="14" LineHeight="1.3" Margin="0,10,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="The sculpture of ancient Greece is the main surviving type of fine ancient Greek art as, with the exception of painted ancient Greek pottery, almost no ancient Greek painting survives. Modern scholarship identifies three major stages in monumental sculpture in bronze and stone: the Archaic (from about 650 to 480 BC), Classical (480–323 BC) and Hellenistic. At all periods there were great numbers of Greek terracotta figurines and small sculptures in metal and other materials."  />
+                            <Span Text="  ..Read More" TextColor="DarkRed" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

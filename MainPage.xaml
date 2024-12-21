@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Course_prj.MainPage"
+             Title="Art Deco"
+             BackgroundImageSource="pieta.jpg" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid WidthRequest="425" Grid.Row="0" BackgroundColor="Brown">
+            <Label Margin="30,0,0,0"
+               Text="Art Deco"
+               FontSize="50"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               TextColor="White" />
+        </Grid>
+        <StackLayout Grid.Row="1">
+            <Border WidthRequest="200" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="Black" Margin="100,0,0,200">
+            <Label x:Name="lblOverlay" Text="Click here" TextColor="White" FontSize="15" 
+                   HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Border>
+        </StackLayout>
+
+        <VerticalStackLayout Grid.Row="2" Margin="0,-80">
+            <Button Text="Get started"  TextColor="Beige" FontSize="20" WidthRequest="350" BackgroundColor="Brown" Clicked="Button_Clicked"> </Button>
+            <Label Text="Kamelija Aleksovska, &#169; 2024" FontSize="10" Margin="20,10,0,0" TextColor="White"/>
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
+

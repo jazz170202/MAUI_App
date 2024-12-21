@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Course_prj.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Course_prj"
+    xmlns:view="clr-namespace:Course_prj"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True"
+    Title="Course_prj">
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+         Title="Home"
+         ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage"
+            Icon="home.svg"
+         >
+
+        </ShellContent>
+        <ShellContent
+         Title="Gallery"
+         ContentTemplate="{DataTemplate local:Gallery}"
+             Route="Gallery"
+            Icon="gallery.svg"
+         >
+
+        </ShellContent>
+        <ShellContent
+         Title="Exhibitions"
+         ContentTemplate="{DataTemplate local:Exhibitions}"
+             Route="Exhibitions"
+             Icon="exhibition.svg"
+         >
+
+        </ShellContent>
+    </FlyoutItem>
+    
+    <TabBar>
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate view:MainPage}"
+        Icon="home.svg">
+
+        </ShellContent>
+        <ShellContent
+         Title="Gallery"
+         ContentTemplate="{DataTemplate view:Gallery}"
+         Icon="gallery.svg">
+            
+        </ShellContent>
+        <ShellContent
+          Title="Exhibitions"
+          ContentTemplate="{DataTemplate view:Exhibitions}"
+          Icon="exhibition.svg">
+
+        </ShellContent>
+    </TabBar>
+
+</Shell>

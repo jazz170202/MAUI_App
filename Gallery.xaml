@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Course_prj.Gallery"
+             Title="Gallery">
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Border Margin="10" StrokeShape="RoundRectangle 10"
+                    StrokeThickness="0"
+                    BackgroundColor="Brown"
+                    VerticalOptions="Start"
+                    Padding="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <VerticalStackLayout Grid.Row="0" Grid.Column="0">
+                        <Label Text="Renaissance exhibits"
+                               Margin="5,0,0,0"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center"
+                               TextColor="Azure"/>
+                        <Label Margin="5,10,0,0" Text="Visit our latest exhibition and dive into the world of the renaissance art" TextColor="Azure"/>
+                    </VerticalStackLayout>
+
+                    <Button x:Name="exhibit" Margin="-100,10,0,0" Grid.Row="1" Grid.Column="0" WidthRequest="100"
+                            Text="Visit"                            
+                            Background="Azure"
+                            TextColor="DarkRed"
+                            FontAttributes="Bold"
+                            CornerRadius="22"
+                            HorizontalOptions="Center"
+                            Clicked="exhibit_Clicked"></Button>
+                    
+                    <Image Grid.RowSpan="2"
+                           Grid.Column="2"
+                           WidthRequest="150"
+                           Source="rene.png" />
+                </Grid>
+            </Border>
+            
+            <BoxView HeightRequest="15"
+                     Color="Transparent" />
+            <Grid Margin="20,10,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0"
+                       Text="Popular items"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"/>
+                <Label Grid.Column="1"
+                       Text="View All"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start" />
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border  Grid.Row="0" 
+                         Grid.Column="0"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"           
+                         BackgroundColor="Beige" 
+                         Padding="0"
+                         Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                               Source="item1.png"
+                              HeightRequest="120"                              
+                              Grid.ColumnSpan="2"/>
+                        <Label  Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Greek Sculpture" 
+                                FontSize="15" 
+                                FontAttributes="Bold"
+                                Margin="10,0,0,10"></Label>
+                        
+                        <Button x:Name="Greek" Margin="10,-5,0,10" 
+                                Grid.Row="2" 
+                                Grid.Column="0"
+                                WidthRequest="100"
+                                HeightRequest="40"
+                                Text="Read more"
+                                Background="DarkRed"
+                                TextColor="Azure"
+                                FontAttributes="Bold"
+                                CornerRadius="22"
+                                HorizontalOptions="Start" 
+                                Clicked="Greek_Clicked">
+                        </Button>
+                    </Grid>
+                </Border>
+                <Border  Grid.Row="0" 
+                         Grid.Column="1"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"           
+                         BackgroundColor="Beige" 
+                         Padding="0"
+                         Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                               Source="item2.png"
+                               HeightRequest="120"
+                               />
+                        <Label  Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Ancient gift item" 
+                                FontSize="15" 
+                                FontAttributes="Bold"
+                                Margin="10,0,0,10"></Label>
+                        <Button Margin="10,-5,0,10" 
+                               Grid.Row="2" 
+                               Grid.Column="0"
+                               WidthRequest="100"
+                               HeightRequest="40"
+                               Text="Read more"
+                               Background="DarkRed"
+                               TextColor="Azure"
+                               FontAttributes="Bold"
+                               CornerRadius="22"
+                               HorizontalOptions="Start">
+                         </Button>
+                    </Grid>
+                </Border>
+                <Border  Grid.Row="1"
+                         Grid.Column="0"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"           
+                         BackgroundColor="Beige" 
+                         Padding="0"
+                         Margin="10">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                               Source="item3.png"
+                               HeightRequest="120" />
+                        <Label  Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Irish Saint's cup" 
+                                FontSize="15" 
+                                FontAttributes="Bold"
+                                Margin="10,0,0,10"></Label>
+                        <Button Margin="10,-5,0,10" 
+                                Grid.Row="2" 
+                                Grid.Column="0"
+                                WidthRequest="100"
+                                HeightRequest="40"
+                                Text="Read more"
+                                Background="DarkRed"
+                                TextColor="Azure"
+                                FontAttributes="Bold"
+                                CornerRadius="22"
+                                HorizontalOptions="Start">
+                        </Button>
+                    </Grid>
+                </Border>
+                <Border  Grid.Row="1" Grid.Column="1"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"           
+                         BackgroundColor="Beige" 
+                         Padding="0"
+                         Margin="10">     
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                              Source="item4.png"
+                              HeightRequest="120"/>
+                        <Label  Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Indian Sculpture" 
+                                FontSize="15" 
+                                FontAttributes="Bold"
+                                Margin="10,0,0,10"></Label>
+                        <Button x:Name="Indian" Margin="10,-5,0,10" 
+                                Grid.Row="2" 
+                                Grid.Column="0"
+                                WidthRequest="100"
+                                HeightRequest="40"
+                                Text="Read more"
+                                Background="DarkRed"
+                                TextColor="Azure"
+                                FontAttributes="Bold"
+                                CornerRadius="22"
+                                HorizontalOptions="Start"
+                                >
+                        </Button>
+                    </Grid>
+                </Border>
+
+                <Border  Grid.Row="2" Grid.Column="0"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"
+                         BackgroundColor="Beige"                      
+                         Padding="0"
+                         Margin="10">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                               Source="item5.png"
+                               HeightRequest="120"/>
+                        <Label  Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Text="Woman's head" 
+                                FontSize="15" 
+                                FontAttributes="Bold"
+                                Margin="10,0,0,10"></Label>
+                        <Button x:Name="Woman" Margin="10,-5,0,10" 
+                                Grid.Row="2" 
+                                Grid.Column="0"
+                                WidthRequest="100"
+                                HeightRequest="40"
+                               Text="Read more"
+                               Background="DarkRed"
+                               TextColor="Azure"
+                               FontAttributes="Bold"
+                               CornerRadius="22"
+                               HorizontalOptions="Start"
+                                Clicked="Woman_Clicked">
+                        </Button>
+                    </Grid>
+                </Border>
+
+                <Border  Grid.Row="2" Grid.Column="1"
+                         StrokeShape="RoundRectangle 10"
+                         StrokeThickness="0"
+                         BackgroundColor="Beige" 
+                         Padding="0"
+                         Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"
+                   Source="item6.png"
+                   HeightRequest="120"/>
+                        <Label  Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     Text="Chinese vase" 
+                     FontSize="15" 
+                     FontAttributes="Bold"
+                     Margin="10,0,0,10"></Label>
+                        <Button Margin="10,-5,0,10" 
+                     Grid.Row="2" 
+                     Grid.Column="0"
+                     WidthRequest="100"
+                     HeightRequest="40"
+                     Text="Read more"
+                     Background="DarkRed"
+                     TextColor="Azure"
+                     FontAttributes="Bold"
+                     CornerRadius="22"
+                     HorizontalOptions="Start">
+                        </Button>
+                    </Grid>
+                </Border>
+            </Grid>            
+        </VerticalStackLayout>        
+    </ScrollView>
+</ContentPage>
